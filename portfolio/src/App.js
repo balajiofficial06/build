@@ -1,13 +1,15 @@
 import './App.css';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { useState } from 'react';
+
+import Navbar from './components/navbar/Navbar';
+import Intro from './components/intro/Intro'
 
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world</h1>
+      <Navbar />
+      <Intro />
     </div>
   );
 }

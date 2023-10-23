@@ -7,11 +7,13 @@ function TodoForm() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        const date = new Date();
-        date.setDate(date.getDate() + 1);
-        console.log(date)
-        db.tasks.add({ task, notes: 'None', deadLine: date, completed: false })
-        setTask('')
+        if (task) {
+            const date = new Date();
+            date.setDate(date.getDate() + 1);
+            console.log(date)
+            db.tasks.add({ task, notes: '', deadLine: date, completed: false })
+            setTask('')
+        }
     }
     return (
         <form className='TodoForm' onSubmit={handleSubmit}>

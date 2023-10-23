@@ -1,7 +1,6 @@
 import React from 'react'
 import { db } from '../utils/db'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import EditDialog from './EditDialog'
 
@@ -19,9 +18,6 @@ function Todo() {
         }
     };
 
-    function editTodo(id) {
-        console.log(id)
-    }
 
     const deleteTodo = async (id) => {
         await db.tasks.delete(id);
